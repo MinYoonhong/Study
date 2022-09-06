@@ -1,0 +1,45 @@
+div {
+    /*border : 3px solid green;*/
+}
+
+.wrap {
+    color : #fff;
+    font-size: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header ul {
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header ul > li {
+    font-size:20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contents {
+    float: left;
+    width: 100%;
+    height: 3000px;
+    line-height: 600px;
+    background: blueviolet;
+}
+.footer{
+    clear: both;
+    height:100px;
+    line-height: 100px;
+    background: chocolate;
+}
