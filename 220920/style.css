@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*body 초기화*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+#header{
+    width: 100%;
+    text-align: center;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(90deg, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+#main-menu, .sub-menu{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#main-menu > li {
+    float: left;
+    position: relative;
+}
+#main-menu > li > a {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    display: block;
+    padding: 12px 36px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    border-right: 1px solid rgba(0,0,0,0.15);
+}
+
+#main-menu > li:nth-child(1) > a {
+    border-left: 1px solid rgba(0,0,0,0.15);
+}
+
+#main-menu > li:hover .sub-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.sub-menu {
+    position: absolute;
+    background: #182952;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sub-menu > li {
+    padding: 16px 28px;
+    border-bottom: 1px solid rgba(0,0,0,0.15)
+}
+
+.sub-menu > li > a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+}
+.sub-menu > li > a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#banner{
+    width: 2560px;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider{
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.5s ease-out;
+}
+.slider li:first-child {
+    margin-left: 100px;
+}
+.slider li:not(:last-child){
+    float: left;
+    margin-right: 100px;
+}
+
+.controller span{
+    position: absolute;
+    background: transparent;
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+}
+.controller span:hover{
+    background: rgba(128,128,128,0.11);
+}
+.prev{
+    left: 10px;
+}
+.prev:hover{
+    transform: translateX(-10px);
+}
+.next{
+    right: 10px;
+}
+.next:hover{
+    transform: translateX(10px);
+}
